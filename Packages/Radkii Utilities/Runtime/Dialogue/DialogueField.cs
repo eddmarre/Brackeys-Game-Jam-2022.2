@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+using System;
+
+public enum DialogueFieldType { Talk, CustomMethod }
+
+[Serializable]
+public class DialogueField
+{
+    public DialogueFieldType fieldType;
+    public bool waitForInput = true;
+
+    public string character, line;
+    public string customMethodName, customMethodParam;
+    //public Action action;
+}

@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.radkii.radkii-utilities": {
+      "version": "file:Radkii Utilities",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.6"
+      }
+    },
     "com.unity.burst": {
       "version": "1.7.1",
       "depth": 1,
