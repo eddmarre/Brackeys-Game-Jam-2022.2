@@ -1,12 +1,13 @@
 {
   "dependencies": {
     "com.radkii.radkii-utilities": {
-      "version": "file:Radkii Utilities",
+      "version": "https://github.com/radkii/radkii-utilities.git",
       "depth": 0,
-      "source": "embedded",
+      "source": "git",
       "dependencies": {
         "com.unity.textmeshpro": "3.0.6"
-      }
+      },
+      "hash": "068de575e366f38011879979add49c6bcd0464e2"
     },
     "com.unity.burst": {
       "version": "1.7.1",
