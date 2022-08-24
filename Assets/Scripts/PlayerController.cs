@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private BoxCollider2D groundCheckerCollider;
+    [SerializeField] private Animator animator;
 
     [Header("LayerMaskSettings")] [SerializeField]
     private LayerMask groundLayerMask;
@@ -30,6 +31,15 @@ public class PlayerController : MonoBehaviour
             0f, groundLayerMask);
 
         _direction = Input.GetAxis("Horizontal");
+
+        if (_direction != 0f)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking",false);
+        }
 
         PlayerInputMovementDirection();
 
