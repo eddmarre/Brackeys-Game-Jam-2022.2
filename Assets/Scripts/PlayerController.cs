@@ -3,6 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Author: Killerpredator1
+///
+/// Purpose: Control Player
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     [Header("PlayerSettings")] [SerializeField]
@@ -32,14 +37,8 @@ public class PlayerController : MonoBehaviour
 
         _direction = Input.GetAxis("Horizontal");
 
-        if (_direction != 0f)
-        {
-            animator.SetBool("isWalking", true);
-        }
-        else
-        {
-            animator.SetBool("isWalking",false);
-        }
+        bool isWalking = _direction != 0f;
+        animator.SetBool("isWalking", isWalking);
 
         PlayerInputMovementDirection();
 
@@ -61,18 +60,10 @@ public class PlayerController : MonoBehaviour
     private void PlayerInputMovementDirection()
     {
         if (_direction > 0f)
-        {
             spriteRenderer.flipX = false;
-            player.velocity = new Vector2(_direction * speed, player.velocity.y);
-        }
-        else if (_direction < 0f)
-        {
-            spriteRenderer.flipX = true;
-            player.velocity = new Vector2(_direction * speed, player.velocity.y);
-        }
-        else
-        {
-            player.velocity = new Vector2(0, player.velocity.y);
-        }
+        else if
+            (_direction < 0f) spriteRenderer.flipX = true;
+
+        player.velocity = new Vector2(_direction * speed, player.velocity.y);
     }
 }
