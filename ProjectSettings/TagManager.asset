@@ -11,9 +11,15 @@ TagManager:
   - Player
   - Water
   - UI
+<<<<<<< HEAD
   - Wire
   - Plug
   - Device
+=======
+  - Floor
+  - Interact
+  - 
+>>>>>>> KillerPredator1Branch
   - 
   - 
   - 
