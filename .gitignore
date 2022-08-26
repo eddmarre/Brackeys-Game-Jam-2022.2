@@ -74,3 +74,6 @@ crashlytics-build.properties
 #TextMeshPro files dumped to Assets after import
 /[Aa]ssets/[Tt]ext[Mm]esh [Pp]ro
 /[Aa]ssets/[Tt]ext[Mm]esh [Pp]ro.meta
+
+/[Aa]ssets/[Ii]gnore[Aa]ssets
+/[Aa]ssets/[Ii]gnore[Aa]ssets.meta
