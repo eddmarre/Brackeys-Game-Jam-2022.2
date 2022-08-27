@@ -1616,6 +1616,8 @@ MonoBehaviour:
   gravity: 10
   startSprite: {fileID: 21300000, guid: 4da23cd496de34a41ade4439f739f050, type: 3}
   endSprite: {fileID: 21300000, guid: eaca9a9c1e164cc44ab817ea685e4b2f, type: 3}
+  wireSprite: {fileID: 21300000, guid: eaca9a9c1e164cc44ab817ea685e4b2f, type: 3}
+  wireColor: {r: 0.2972886, g: 0.1401566, b: 0.5849056, a: 0}
   spriteScale: {x: 1.8, y: 1.8, z: 1}
   startPosition: {x: -3.71, y: 1.18, z: 0}
   endPosition: {x: -0.58, y: 1.49, z: 0}

@@ -11,7 +11,8 @@ public class FakeWire : MonoBehaviour
     [SerializeField] private int segmentCount;
 	[SerializeField] private Vector2 segmentSize;
 	[SerializeField] private float gravity = 10f;
-	[SerializeField] private Sprite startSprite, endSprite;
+	[SerializeField] private Sprite startSprite, endSprite, wireSprite;
+	[SerializeField] private Color wireColor;
 	[SerializeField] private Vector3 spriteScale = Vector3.one;
 
 	[SerializeField] private Vector3 startPosition, endPosition;
@@ -115,6 +116,10 @@ public class FakeWire : MonoBehaviour
 
 		CreatePlug("Start", startPosition, startSprite, out startTransform);
 		CreatePlug("End", endPosition, endSprite, out endTransform);
+		
+		lineRenderer.material.SetFloat("_HasWireTex", (wireSprite == null) ? 0f : 1f);
+		if(wireSprite) lineRenderer.material.SetTexture("_WireTex", wireSprite.texture);
+		else lineRenderer.material.SetColor("_WireColor", wireColor);
 
 		nodes = new List<WireNode>();
 		for (int i = 0; i < segmentCount; i++)
